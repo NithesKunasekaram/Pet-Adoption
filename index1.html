@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet-Adoption</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+</head>
+
+<body>
+
+    <div class="bg-[#ffd0b6] mt-5 rounded-t-[40px] overflow-hidden md:ms-6 ">
+
+        <!--NAVBAR-->
+        <div class="p-4 flex flex-col lg:flex-row justify-between items-center gap-5">
+
+            <!-- LOGO -->
+            <div class="w-full lg:w-auto flex justify-between items-center">
+
+                <div class="flex items-center gap-3">
+
+                    <div class="h-12 w-12 rounded-full bg-red-300 flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold">
+                            NithesH K
+                        </h1>
+
+                        <p class="text-sm text-gray-600">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Batticaloa Town
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+            <div class="w-full lg:w-[300px] flex items-center bg-white rounded-xl px-4 py-3 shadow">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="searchInput" placeholder="Search pet to adopt"
+                    class="bg-transparent outline-none px-3 w-full text-bold" />
+            </div>
+        </div>
+
+        <!--FILTER BUTTONS-->
+
+        <div class="grid grid-cols-4 gap-4 px-4 pb-6">
+
+            <!-- ALL -->
+            <div class="flex flex-col items-center gap-2">
+                <button
+                    class="filter-btn w-full border rounded-2xl bg-white py-4 hover:bg-blue-200 transition shadow-md"
+                    data-filter="all">
+
+                    <i class="fa-solid fa-paw text-2xl md:text-3xl"></i>
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700">
+                    All
+                </p>
+            </div>
+
+            <!-- DOG -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button
+                    class="filter-btn w-full border rounded-2xl bg-white py-4 hover:bg-blue-200 transition shadow-md"
+                    data-filter="dog">
+
+                    <i class="fa-solid fa-dog text-2xl md:text-3xl"></i>
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700">
+                    Dogs
+                </p>
+            </div>
+
+            <!-- CAT -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button
+                    class="filter-btn w-full border rounded-2xl bg-white py-4 hover:bg-blue-200 transition shadow-md"
+                    data-filter="cat">
+
+                    <i class="fa-solid fa-cat text-2xl md:text-3xl"></i>
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700">
+                    Cats
+                </p>
+            </div>
+
+            <!-- BIRD -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button
+                    class="filter-btn w-full border rounded-2xl bg-white py-4 hover:bg-blue-200 transition shadow-md"
+                    data-filter="bird">
+
+                    <i class="fa-solid fa-dove text-2xl md:text-3xl"></i>
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700">
+                    Birds
+                </p>
+            </div>
+
+        </div>
+
+
+        <!--Cards-->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 ">
+
+            <!-- Dogs -->
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img src="dog.jpeg" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        PETER
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Beagle Dog
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        15 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 2.5km
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="max">
+
+                <!-- Image -->
+                <img src="dog-2.webp" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="max">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        MAX
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Golden Retriever
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        8 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 1.8km
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="rocxy">
+
+                <!-- Image -->
+                <img src="dog-3.webp" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="rocxy">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        ROCKY
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        German Shepherd
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        5 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 3.2km
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Cats -->
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="cat" data-name="luna">
+
+                <!-- Image -->
+                <img src="cat.webp" alt="Dog" class="w-full h-56 object-cover rounded-xl">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="cat" data-name="luna">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        LUNA
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Persian Cat
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        3 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 1.1km
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="cat" data-name="milo">
+
+                <!-- Image -->
+                <img src="cat-2.jpg" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="cat" data-name="milo">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        MILO
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Siamese Cat
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        6 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 2.9km
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="cat" data-name="bella">
+
+                <!-- Image -->
+                <img src="cat-3.webp" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="cat" data-name="bella">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        BELLA
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        British Shorthair Cat
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        4 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 0.7km
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Birds -->
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="bird" data-name="kiwi">
+
+                <!-- Image -->
+                <img src="bird-1.webp" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="bird" data-name="kiwi">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        KIWI
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Parrot Bird
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        2 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 1.5km
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="bird" data-name="coco">
+
+                <!-- Image -->
+                <img src="bird-2.webp" alt="Dog" class="w-full h-56 object-cover rounded-lg">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="bird" data-name="coco">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        COCO
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Cockatiel Bird
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        1 year old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 2.1km
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="bird" data-name="sky">
+
+                <!-- Image -->
+                <img src="bird-3.webp" alt="Dog" class="w-full h-56 object-cover rounded-xl">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="bird" data-name="sky">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        SKY
+                    </h1>
+
+                    <p class="text-gray-500 mb-4">
+                        Lovebird
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        3 years old
+                    </p>
+
+                    <p class="text-sm text-gray-700">
+                        Distance 4.0km
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--BigCard-->
+
+        <div id="petDetails" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8 bg-red-300 m-4 p-4 md:p-8 rounded-3xl">
+
+            <!-- Image Section -->
+            <div class="flex justify-center ">
+                <img id="detailImage" src="dog.jpeg" alt="Dog" class="w-full max-w-md h-auto object-cover rounded-3xl">
+            </div>
+
+            <!-- Content Section -->
+            <div class="flex flex-col justify-center">
+
+                <!-- Title -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center lg:text-left">
+                    PETER
+                </h1>
+
+                <!-- Info Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 my-6">
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            BREED
+                        </h1>
+                        <p id="detailBreed" class="text-sm">
+                            Beagle
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            SEX
+                        </h1>
+                        <p class="text-sm">
+                            Male
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            AGE
+                        </h1>
+                        <p id="detailAge" class="text-sm">
+                            15 Years
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            WEIGHT
+                        </h1>
+                        <p class="text-sm">
+                            12kg
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <button type="submit"
+                    class="mt-6 w-full md:w-60 p-3 bg-green-500 hover:bg-blue-600 transition text-white text-lg font-bold rounded-xl">
+                    Adoption
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+
+    // SEARCH
+    const searchInput = document.getElementById("searchInput");
+
+    // FILTER BUTTONS
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    // CARDS
+    const cards = document.querySelectorAll(".pet-card");
+
+    // DETAIL SECTION
+    const detailSection = document.getElementById("petDetails");
+
+    // DETAIL ELEMENTS
+    const detailImage = document.getElementById("detailImage");
+    const detailName = document.getElementById("detailName");
+    const detailBreed = document.getElementById("detailBreed");
+    const detailAge = document.getElementById("detailAge");
+    const detailAbout = document.getElementById("detailAbout");
+    
+
+
+    // SEARCH FUNCTION
+    
+
+    searchInput.addEventListener("keyup", () => {
+
+        // trim + lowercase
+        const value = searchInput.value.trim().toLowerCase();
+
+        cards.forEach(card => {
+
+            const petName = card.dataset.name.toLowerCase();
+
+            if (petName.includes(value)) {
+
+                card.style.display = "flex";
+
+            } else {
+
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+
+    // FILTER BUTTONS
+  
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const filter = button.dataset.filter;
+
+            cards.forEach(card => {
+
+                if (filter === "all") {
+
+                    card.style.display = "flex";
+
+                } else if (card.dataset.category === filter) {
+
+                    card.style.display = "flex";
+
+                } else {
+
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+    });
+
+
+    // CARD CLICK DETAILS
+    
+
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            detailSection.classList.remove("hidden");
+
+            const image = card.querySelector("img").src;
+
+            const name = card.querySelector("h1").innerText;
+
+            const breed = card.querySelectorAll("p")[0].innerText;
+
+            const age = card.querySelectorAll("p")[1].innerText;
+
+            detailImage.src = image;
+
+            detailName.innerText = name;
+
+            detailBreed.innerText = breed;
+
+            detailAge.innerText = age;
+
+            detailAbout.innerText =
+                `${name} is a friendly and beautiful pet available for adoption.`;
+
+            // scroll to detail section
+            detailSection.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+</script>
+
+</html>
