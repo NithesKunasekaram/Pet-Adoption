@@ -16,8 +16,41 @@
 
     <div class="bg-[#ffd0b6] mt-5 rounded-t-[40px] overflow-hidden md:ms-6 ">
 
+        <!-- Skeleton -->
+        <div id="loading" class="p-4 flex flex-col lg:flex-row justify-between items-center gap-5 animate-pulse">
+
+            <!-- LOGO -->
+            <div class="w-full lg:w-auto flex justify-between items-center">
+
+                <div class="flex items-center gap-3">
+
+                    <div
+                        class="h-12 w-12 rounded-full flex items-center justify-center text-white text-xl p-5 bg-gray-300">
+
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold p-5 bg-gray-300 m-2">
+
+                        </h1>
+
+                        <p class="text-sm text-gray-600 p-5 bg-gray-300 w-40">
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+            <div class="w-full lg:w-[300px] flex items-center p-8 bg-gray-300 rounded-xl shadow animate-pulse">
+
+            </div>
+        </div>
+
         <!--NAVBAR-->
-        <div class="p-4 flex flex-col lg:flex-row justify-between items-center gap-5">
+
+        <div id="content" class="hidden p-4 flex flex-col lg:flex-row justify-between items-center gap-5">
 
             <!-- LOGO -->
             <div class="w-full lg:w-auto flex justify-between items-center">
@@ -120,6 +153,10 @@
             </div>
 
         </div>
+
+        <!-- skeleton Loading -->
+
+
 
 
         <!--Cards-->
@@ -452,16 +489,13 @@
 
 <script>
 
-    // SEARCH
+
     const searchInput = document.getElementById("searchInput");
 
-    // FILTER BUTTONS
     const filterButtons = document.querySelectorAll(".filter-btn");
 
-    // CARDS
     const cards = document.querySelectorAll(".pet-card");
 
-    // DETAIL SECTION
     const detailSection = document.getElementById("petDetails");
 
     // DETAIL ELEMENTS
@@ -470,11 +504,11 @@
     const detailBreed = document.getElementById("detailBreed");
     const detailAge = document.getElementById("detailAge");
     const detailAbout = document.getElementById("detailAbout");
-    
+
 
 
     // SEARCH FUNCTION
-    
+
 
     searchInput.addEventListener("keyup", () => {
 
@@ -500,7 +534,7 @@
 
 
     // FILTER BUTTONS
-  
+
 
     filterButtons.forEach(button => {
 
@@ -531,7 +565,7 @@
 
 
     // CARD CLICK DETAILS
-    
+
 
     cards.forEach(card => {
 
@@ -558,7 +592,7 @@
             detailAbout.innerText =
                 `${name} is a friendly and beautiful pet available for adoption.`;
 
-            // scroll to detail section
+            // scroll section
             detailSection.scrollIntoView({
                 behavior: "smooth"
             });
@@ -566,6 +600,13 @@
         });
 
     });
+
+    setTimeout(() => {
+
+        document.getElementById('loading').classList.add('hidden');
+
+        document.getElementById('content').classList.remove('hidden');
+    }, 3000)
 
 </script>
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <!-- skeleton Loading -->
+    
+    <div id="loading" class="grid grid-cols-2 gap-2 mt-20 mx-4">
+
+        <div class="bg-blue-300 p-6 animate-pulse">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl"></h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+        </div>
+
+        <div class="bg-blue-400 p-6 animate-pulse">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl"></h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+        </div>
+
+        <div class="bg-blue-500 p-6 animate-pulse">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl"></h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+        </div>
+
+        <div class="bg-blue-600 p-6 ">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl"></h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl"></p>
+        </div>
+       
+
+    </div>
+
+    <!-- Real Content -->
+
+    <div id="content" class="hidden grid grid-cols-2 gap-2 mt-20 mx-4">
+
+        <div class="bg-blue-300 p-6">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl">Hellow</h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit Lorem ipsum </p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+        </div>
+
+        <div class="bg-blue-400 p-6">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl">Hellow</h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit Lorem ipsum</p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+        </div>
+
+        <div class="bg-blue-500 p-6">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl">Hellow</h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit Lorem ipsum</p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+        </div>
+
+        <div class="bg-blue-600 p-6">
+            <h1 class="w-30 h-10 bg-gray-500 mt-4 rounded-xl">Hellow</h1>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+            <p class="w-70 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit Lorem ipsum</p>
+            <p class="w-50 h-6 bg-gray-500 mt-4 rounded-xl">Lorem ipsum dolor, sit</p>
+        </div>
+        
+
+    </div>
+
+</body>
+
+<script>
+
+    setTimeout(()=> {
+
+        document.getElementById('loading').classList.add('hidden');
+
+        document.getElementById('content').classList.remove('hidden');
+    }, 5000)
+
+
+</script>
+</html>
