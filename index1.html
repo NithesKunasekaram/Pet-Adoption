@@ -14,10 +14,14 @@
 
 <body>
 
-    <div class="bg-[#ffd0b6] mt-5 rounded-t-[40px] overflow-hidden md:ms-6 ">
+    <!-- Skeleton Loading -->
 
-        <!-- Skeleton -->
-        <div id="loading" class="p-4 flex flex-col lg:flex-row justify-between items-center gap-5 animate-pulse">
+    <div id="loading" class="bg-[#ffd0b6] mt-5 rounded-t-[40px] overflow-hidden md:ms-6 ">
+
+
+        <!--NAVBAR-->
+
+        <div class=" p-4 flex flex-col lg:flex-row justify-between items-center gap-5 animate-pulse">
 
             <!-- LOGO -->
             <div class="w-full lg:w-auto flex justify-between items-center">
@@ -25,16 +29,16 @@
                 <div class="flex items-center gap-3">
 
                     <div
-                        class="h-12 w-12 rounded-full flex items-center justify-center text-white text-xl p-5 bg-gray-300">
+                        class="h-12 w-12 rounded-full flex items-center justify-center text-white text-xl bg-gray-300 p-2">
 
                     </div>
 
                     <div>
-                        <h1 class="text-2xl md:text-3xl font-bold p-5 bg-gray-300 m-2">
+                        <h1 class="text-2xl md:text-3xl font-bold bg-gray-300 px-10 py-5 rounded-xl">
 
                         </h1>
 
-                        <p class="text-sm text-gray-600 p-5 bg-gray-300 w-40">
+                        <p class="text-sm text-gray-600 bg-gray-300 p-20 py-5 mt-2 rounded-xl">
 
                         </p>
                     </div>
@@ -43,14 +47,414 @@
             </div>
 
             <!-- SEARCH -->
-            <div class="w-full lg:w-[300px] flex items-center p-8 bg-gray-300 rounded-xl shadow animate-pulse">
+            <div class="w-full lg:w-[300px] flex items-center bg-gray-300 rounded-xl px-4 py-3 shadow">
 
+
+                <input type="text" id="searchInput" class="bg-transparent outline-none px-3 w-full text-bold" />
             </div>
         </div>
 
+        <!--FILTER BUTTONS-->
+
+        <div class="grid grid-cols-4 gap-4 px-4 pb-6 animate-pulse">
+
+            <!-- ALL -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button class="filter-btn w-full rounded-2xl bg-gray-300 py-8 transition shadow-md" data-filter="all">
+
+
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700 bg-gray-300 p-5 rounded-lg">
+
+                </p>
+            </div>
+
+            <!-- DOG -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button class="filter-btn w-full rounded-2xl bg-gray-300 py-8 transition shadow-md" data-filter="dog">
+
+
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700 bg-gray-300 p-5 rounded-lg">
+
+                </p>
+            </div>
+
+            <!-- CAT -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button class="filter-btn w-full rounded-2xl bg-gray-300 py-8 transition shadow-md" data-filter="cat">
+
+
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700 bg-gray-300 p-5 rounded-lg">
+
+                </p>
+            </div>
+
+            <!-- BIRD -->
+            <div class="flex flex-col items-center gap-2">
+
+                <button class="filter-btn w-full rounded-2xl bg-gray-300 py-8 transition shadow-md" data-filter="bird">
+
+
+
+                </button>
+
+                <p class="text-sm md:text-base font-medium text-gray-700 bg-gray-300 p-5 rounded-lg">
+
+                </p>
+            </div>
+
+        </div>
+
+
+        <!--Cards-->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 animate-pulse">
+
+            <!-- Dogs -->
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Cats -->
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Birds -->
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pet-card p-5 flex flex-col bg-gray-300 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="dog" data-name="peter">
+
+                <!-- Image -->
+                <img alt="" class="w-full h-56 object-cover rounded-lg bg-gray-500">
+
+                <!-- Content -->
+                <div class="pet-card flex flex-col items-center" data-category="dog" data-name="petter ">
+                    <h1 class="text-xl font-bold text-gray-800 bg-gray-500 py-8 px-30 rounded-lg m-2">
+                        
+                    </h1>
+
+                    <p class="text-gray-500 mb-4 bg-gray-500 py-8 px-40 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-20 m-2 rounded-lg">
+                        
+                    </p>
+
+                    <p class="text-sm text-gray-700 bg-gray-500 py-8 px-30 rounded-lg">
+                       
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>    
+
+        <!--BigCard-->
+
+        <div id="petDetails" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8 bg-red-300 m-4 p-4 md:p-8 rounded-3xl">
+
+            <!-- Image Section -->
+            <div class="flex justify-center ">
+                <img id="detailImage" src="dog.jpeg" alt="Dog" class="w-full max-w-md h-auto object-cover rounded-3xl">
+            </div>
+
+            <!-- Content Section -->
+            <div class="flex flex-col justify-center">
+
+                <!-- Title -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center lg:text-left">
+                    PETER
+                </h1>
+
+                <!-- Info Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 my-6">
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            BREED
+                        </h1>
+                        <p id="detailBreed" class="text-sm">
+                            Beagle
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            SEX
+                        </h1>
+                        <p class="text-sm">
+                            Male
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            AGE
+                        </h1>
+                        <p id="detailAge" class="text-sm">
+                            15 Years
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl text-center hover:bg-blue-200">
+                        <h1 class="font-bold text-sm md:text-base">
+                            WEIGHT
+                        </h1>
+                        <p class="text-sm">
+                            12kg
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <button type="submit"
+                    class="mt-6 w-full md:w-60 p-3 bg-green-500 hover:bg-blue-600 transition text-white text-lg font-bold rounded-xl">
+                    Adoption
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Real content -->
+
+    <div id="content" class="hidden bg-[#ffd0b6] mt-5 rounded-t-[40px] overflow-hidden md:ms-6 ">
+
+        <!-- Skeleton -->
+
+
         <!--NAVBAR-->
 
-        <div id="content" class="hidden p-4 flex flex-col lg:flex-row justify-between items-center gap-5">
+        <div id="content" class=" p-4 flex flex-col lg:flex-row justify-between items-center gap-5">
 
             <!-- LOGO -->
             <div class="w-full lg:w-auto flex justify-between items-center">
@@ -153,8 +557,6 @@
             </div>
 
         </div>
-
-        <!-- skeleton Loading -->
 
 
 
@@ -606,7 +1008,7 @@
         document.getElementById('loading').classList.add('hidden');
 
         document.getElementById('content').classList.remove('hidden');
-    }, 3000)
+    }, 5000)
 
 </script>
 
